@@ -10,7 +10,7 @@ use App\Enums\Heat;
 class Coffee extends Model
 {
     
-    protected $filliable = [
+    protected $fillable = [
         'name',
         'description',
         'price',
