@@ -31,13 +31,13 @@
 
         <div class="product-detail-actions">
 
-            <button type="button" class="button button-primary button-md">
+            <a href="#" type="button" class="button button-primary button-md">
                 Adicionar ao pedido
-            </button>
+            </a>
 
-            <button type="button" class="button button-accent button-md">
+            <a href="{{ route('coffees.edit', $coffee) }}" type="button" class="button button-accent button-md">
                 Editar
-            </button>
+            </a>
 
             <button type="button" class="button button-danger" data-bs-toggle="modal"
                 data-bs-target="#removeCoffeeModal">
