@@ -1,0 +1,36 @@
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  background-color: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-divider);
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.navbar-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+.navbar-logo:hover {
+  color: var(--color-accent);
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}

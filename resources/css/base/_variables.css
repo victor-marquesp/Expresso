@@ -1,0 +1,68 @@
+
+
+:root {
+  --color-bg: #1B1720;
+  /* --color-bg: #E37383; */
+  --color-bg-secondary: #241F2B;
+  --color-surface: #2D2736;
+  --color-surface-hover: #383143;
+
+  --color-text-primary: #F6F3F9;
+  --color-text-secondary: #B7B0C4;
+  --color-text-disabled: #777086;
+
+  --color-primary: #8B5CF6;
+  --color-primary-hover: #7C4DE9;
+  --color-primary-active: #6E42D6;
+
+  --color-accent: #D7A35C;
+  --color-success: #72D28C;
+  --color-warning: #E8B65C;
+  --color-danger: #E26D75;
+  --color-info: #65B8F5;
+
+  --color-border: #40394A;
+  --color-divider: #332E3B;
+  --color-shadow: rgba(0, 0, 0, .35);
+  --color-glow: rgba(139, 92, 246, .35);
+
+  --font-primary: 'Nunito', sans-serif;
+  --font-secondary: 'Playfair Display', serif;
+
+  --font-size-display: 56px;
+  --font-size-h1: 40px;
+  --font-size-h2: 32px;
+  --font-size-h3: 24px;
+  --font-size-h4: 20px;
+  --font-size-body: 16px;
+  --font-size-small: 14px;
+  --font-size-caption: 12px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --radius-circle: 50%;
+
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, .18);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, .22);
+  --shadow-lg: 0 20px 48px rgba(0, 0, 0, .35);
+  --shadow-glow: 0 0 20px rgba(139, 92, 246, .28);
+
+  --duration-base: 200ms;
+  --ease-base: ease;
+}

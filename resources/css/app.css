@@ -1,1 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
 @import "bootstrap/dist/css/bootstrap.min.css";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+@import "resources/css/base/_variables.css";
+@import "resources/css/base/_reset.css";
+@import "resources/css/base/_typography.css";
+@import "resources/css/base/_utilities.css";
+
+@import "resources/css/components/_buttons.css";
+@import "resources/css/components/_navbar.css";
+@import "resources/css/components/_page-header.css";
+@import "resources/css/components/_product-card.css";
+@import "resources/css/components/_grid.css";

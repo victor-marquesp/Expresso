@@ -1,20 +1,19 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
+<nav class="navbar">
 
-        <a class="navbar-brand" href="#">Expresso</a>
+    <div class="container navbar-content">
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">teste</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">teste</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">teste</a>
-                </li>
-            </ul>
+        <a href="{{ route('home') }}" class="navbar-logo">
+            ☕ Midnight Café
+        </a>
+
+        <div class="navbar-actions">
+
+            <button class="button button-ghost">
+                Cafés
+            </button>
+
         </div>
+
     </div>
+
 </nav>

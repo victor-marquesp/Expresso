@@ -1,0 +1,90 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  padding: var(--space-3) var(--space-5);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color var(--duration-base) var(--ease-base),
+              border-color var(--duration-base) var(--ease-base),
+              box-shadow var(--duration-base) var(--ease-base),
+              transform var(--duration-base) var(--ease-base);
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.button:disabled,
+.button[disabled] {
+  cursor: not-allowed;
+  opacity: .55;
+  transform: none;
+}
+
+.button-sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-small);
+}
+
+.button-lg {
+  padding: var(--space-4) var(--space-6);
+  font-size: var(--font-size-h4);
+}
+
+.button-primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
+}
+
+.button-primary:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+  box-shadow: var(--shadow-glow);
+}
+
+.button-primary:active:not(:disabled) {
+  background-color: var(--color-primary-active);
+}
+
+.button-secondary {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+  color: var(--color-text-primary);
+}
+
+.button-secondary:hover:not(:disabled) {
+  background-color: var(--color-surface-hover);
+}
+
+.button-accent:active:not(:disabled) {
+  background-color: var(--color-primary-active);
+}
+
+.button-ghost {
+  background-color: transparent;
+  color: var(--color-text-primary);
+}
+
+.button-ghost:hover:not(:disabled) {
+  background-color: var(--color-surface-hover);
+}
+
+.button-danger {
+  background-color: var(--color-danger);
+  color: var(--color-text-primary);
+}
+
+.button-danger:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.button-block {
+  width: 100%;
+}
