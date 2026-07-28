@@ -1,0 +1,58 @@
+
+.modal-backdrop {
+  background-color: var(--color-bg);
+}
+
+.modal-backdrop.show {
+  opacity: .75;
+}
+
+.modal-content {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--color-divider);
+  padding: var(--space-5);
+}
+
+.modal-title {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-h3);
+  color: var(--color-text-primary);
+}
+
+.modal-header .btn-close {
+  filter: invert(1) grayscale(100%) brightness(1.8);
+  opacity: .7;
+}
+
+.modal-header .btn-close:hover {
+  opacity: 1;
+}
+
+.modal-body {
+  padding: var(--space-5);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-body);
+}
+
+.modal-footer {
+  border-top: 1px solid var(--color-divider);
+  padding: var(--space-5);
+  gap: var(--space-3);
+}
+
+.modal.fade .modal-dialog {
+  transform: scale(.95);
+  transition: transform var(--duration-base) var(--ease-base),
+              opacity var(--duration-base) var(--ease-base);
+}
+
+.modal.show .modal-dialog {
+  transform: scale(1);
+}

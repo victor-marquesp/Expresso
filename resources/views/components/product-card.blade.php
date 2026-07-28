@@ -1,10 +1,12 @@
 @props(['coffee'])
 
 <article class="product-card">
-    <img
+    <a href="{{ route('coffees.show', $coffee->id) }}">
+        <img
         src="{{ $coffe->picture ?? asset("images/no-picture.webp") }}"
         alt="{{ $coffee->name }}"
         class="product-card-image">
+    </a>
 
     <div class="product-card-body">
 

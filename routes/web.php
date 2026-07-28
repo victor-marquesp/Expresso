@@ -4,8 +4,6 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\CoffeeController;
 
-Route::get('/', function () {
-    return redirect()->route('coffee.index');
-})->name('home');
+Route::view('/', 'style-guide')->name('home');
 
-Route::resource('/coffee', CoffeeController::class);
+Route::resource('/coffees', CoffeeController::class);

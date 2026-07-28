@@ -8,9 +8,11 @@
 
         <div class="navbar-actions">
 
-            <button class="button button-ghost">
-                Cafés
-            </button>
+            <a href="{{ route('coffees.index') }}">
+                <button class="button button-ghost">
+                    Cafés
+                </button>
+            </a>
 
         </div>
 

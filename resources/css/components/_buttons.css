@@ -63,8 +63,13 @@
   background-color: var(--color-surface-hover);
 }
 
-.button-accent:active:not(:disabled) {
-  background-color: var(--color-primary-active);
+.button-accent {
+  background-color: var(--color-accent);
+  color: var(--color-text-primary);
+}
+
+.button-accent:hover:not(:disabled) {
+  filter: brightness(1.1);
 }
 
 .button-ghost {

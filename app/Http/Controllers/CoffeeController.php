@@ -19,7 +19,7 @@ class CoffeeController extends Controller
 
     public function create()
     {
-        // return view('coffee.create');
+        return view('coffee.create');
     }
 
     public function store(StoreCoffeeRequest $request)
@@ -28,17 +28,17 @@ class CoffeeController extends Controller
 
         Coffee::create($validated);
 
-        return redirect()->route('coffee.index')->with('success', 'café criado');
+        return redirect()->route('coffees.index')->with('success', 'café criado');
     }
 
     public function show(Coffee $coffee)
     {
-        // return view('coffee.show', compact('coffee'));
+        return view('coffee.show', compact('coffee'));
     }
 
     public function edit(Coffee $coffee)
     {
-        // return view('coffee.edit', compact('coffee'));
+        return view('coffee.edit', compact('coffee'));
     }
 
     public function update(UpdateCoffeeRequest $request, Coffee $coffee)
@@ -47,13 +47,13 @@ class CoffeeController extends Controller
 
         $coffee->update($validated);
 
-        return redirect()->route('coffee.index')->with('success', 'café editado');
+        return redirect()->route('coffees.index')->with('success', 'café editado');
     }
 
     public function destroy(Coffee $coffee)
     {
         $coffee->delete();
 
-        return redirect()->route('coffee.index')->with('success', 'café deletado');
+        return redirect()->route('coffees.index')->with('success', 'café deletado');
     }
 }
