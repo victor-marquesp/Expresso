@@ -45,8 +45,8 @@
 }
 
 .button-primary:hover:not(:disabled) {
-  background-color: var(--color-primary-hover);
-  box-shadow: var(--shadow-glow);
+  background-color: var(--color-accent);
+  /* box-shadow: var(--shadow-glow); */
 }
 
 .button-primary:active:not(:disabled) {

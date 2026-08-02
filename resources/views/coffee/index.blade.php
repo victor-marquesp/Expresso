@@ -6,8 +6,10 @@
 
     <x-page-header :title="'Cafés'">
 
-        <a href="{{ route('coffees.create') }}" class="button button-primary">
-            + Café
+        <a href="{{ route('coffees.create') }}">
+            <button class="button button-primary">
+                + Café
+            </button>
         </a>
 
     </x-page-header>

@@ -3,18 +3,18 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
-@import "resources/css/base/_variables.css";
-@import "resources/css/base/_reset.css";
-@import "resources/css/base/_typography.css";
-@import "resources/css/base/_utilities.css";
+@import "./base/_variables.css";
+@import "./base/_reset.css";
+@import "./base/_typography.css";
+@import "./base/_utilities.css";
 
-@import "resources/css/components/_buttons.css";
-@import "resources/css/components/_navbar.css";
-@import "resources/css/components/_page-header.css";
-@import "resources/css/components/_product-card.css";
-@import "resources/css/components/_grid.css";
-@import "resources/css/components/_forms.css";
-@import "resources/css/components/_modals.css";
-@import "resources/css/components/_toasts.css";
-@import "resources/css/components/_badges.css";
-@import "resources/css/components/_product-detail.css";
+@import "./components/_buttons.css";
+@import "./components/_navbar.css";
+@import "./components/_page-header.css";
+@import "./components/_product-card.css";
+@import "./components/_grid.css";
+@import "./components/_forms.css";
+@import "./components/_modals.css";
+@import "./components/_toasts.css";
+@import "./components/_badges.css";
+@import "./components/_product-detail.css";
