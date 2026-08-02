@@ -25,8 +25,9 @@ class StoreCoffeeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['required', 'string'],
-            'description' => ['nullable', 'string'],
+            'name' => ['required', 'string', 'max:100'],
+            'description' => ['nullable', 'string', 'max:500'],
+            'picture' => ['image', 'max:10240'],
             'price' => ['required', 'numeric', 'min:0'],
             'size' => ['required', Rule::enum(Size::class)],
             'heat' => ['required', Rule::enum(Heat::class)],
@@ -34,26 +35,39 @@ class StoreCoffeeRequest extends FormRequest
         ];
     }
 
-    public function messages() : array {
+    public function attributes(): array
+    {
         return [
-            'name.required' => 'O nome do café é obrigatório',
-            'name.string' => 'O nome do café deve ser uma string',
-
-            'description.string' => 'Descrição do café deve ser uma string',
-
-            'price.required' => 'Preço do café é obrigatório',
-            'price.numeric' => 'Preço do café deve ser um inteiro',
-            'price.min' => 'Preço não pode ser negativo',
-
-            'size.required' => 'Tamanho do café é obrigatório',
-            'size.enum' => 'Tamanho do café deve pertencer à enum',
-            'heat.required' => 'Temperatura do café é obrigatória',
-            'heat.enum' => 'Temperatura do café deve pertencer à enum',
-
-            'volume_ml.required' => 'O volume do café é obrigatório',
-            'volume_ml.integer' => 'O volume do café deve ser um inteiro',
-            'volume_ml.min' => 'O volume do café deve ser positivo',
-
+            'name' => 'nome',
+            'description' => 'descrição',
+            'picture' => 'foto',
+            'price' => 'preço',
+            'size' => 'tamanho',
+            'heat' => 'temperatura',
+            'volume_ml' => 'volume',
         ];
     }
+
+    // public function messages() : array {
+    //     return [
+    //         'name.required' => 'O nome do café é obrigatório',
+    //         'name.string' => 'O nome do café deve ser uma string',
+
+    //         'description.string' => 'Descrição do café deve ser uma string',
+
+    //         'price.required' => 'Preço do café é obrigatório',
+    //         'price.numeric' => 'Preço do café deve ser um inteiro',
+    //         'price.min' => 'Preço não pode ser negativo',
+
+    //         'size.required' => 'Tamanho do café é obrigatório',
+    //         'size.enum' => 'Tamanho do café deve pertencer à enum',
+    //         'heat.required' => 'Temperatura do café é obrigatória',
+    //         'heat.enum' => 'Temperatura do café deve pertencer à enum',
+
+    //         'volume_ml.required' => 'O volume do café é obrigatório',
+    //         'volume_ml.integer' => 'O volume do café deve ser um inteiro',
+    //         'volume_ml.min' => 'O volume do café deve ser positivo',
+
+    //     ];
+    // }
 }

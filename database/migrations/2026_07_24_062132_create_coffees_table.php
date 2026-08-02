@@ -13,6 +13,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('description')->nullable();
+            $table->string('picture_path')->nullable();
             $table->decimal('price');
             $table->string('size');
             $table->string('heat');

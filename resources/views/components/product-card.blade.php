@@ -3,7 +3,9 @@
 <article class="product-card">
     <a href="{{ route('coffees.show', $coffee->id) }}">
         <img
-        src="{{ $coffe->picture ?? asset("images/no-picture.webp") }}"
+        src="{{ 
+            $coffee->picture_path ? asset('storage/' .$coffee->picture_path) : asset("images/no-picture.webp") 
+        }}"
         alt="{{ $coffee->name }}"
         class="product-card-image">
     </a>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 use App\Models\Coffee;
 use App\Http\Requests\StoreCoffeeRequest;
@@ -26,8 +27,13 @@ class CoffeeController extends Controller
     {
         $validated = $request->validated();
 
-        Coffee::create($validated);
+        if($request->hasFile('picture')) {
+            $path = $request->file('picture')->store('coffees', 'public');
+            $validated['picture_path'] = $path;
+        }
 
+        Coffee::create($validated);
+        
         return redirect()->route('coffees.index')->with('success', 'café criado');
     }
 
@@ -45,6 +51,16 @@ class CoffeeController extends Controller
     {
         $validated = $request->validated();
 
+        if($request->hasFile('picture')) {
+
+            if($coffee->picture_path) {
+                Storage::disk('public')->delete($coffee->picture_path);     // Deleta a foto antiga
+            }
+
+            $path = $request->file('picture')->store('coffees', 'public');
+            $validated['picture_path'] = $path;
+        }
+
         $coffee->update($validated);
 
         return redirect()->route('coffees.index')->with('success', 'café editado');
@@ -52,6 +68,10 @@ class CoffeeController extends Controller
 
     public function destroy(Coffee $coffee)
     {
+        if($coffee->picture_path) {
+            Storage::disk('public')->delete($coffee->picture_path);
+        }
+
         $coffee->delete();
 
         return redirect()->route('coffees.index')->with('success', 'café deletado');

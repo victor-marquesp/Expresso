@@ -1,7 +1,10 @@
 @props(['coffee'])
 
 <section class="product-detail">
-    <img src="{{ $coffee->picture ?? asset('images/no-picture.webp') }}" alt="{{ $coffee->name }}"
+    <img src="{{ 
+            $coffee->picture_path ? asset('storage/' .$coffee->picture_path) : asset("images/no-picture.webp") 
+        }}" 
+        alt="{{ $coffee->name }}"
         class="product-detail-image">
 
     <div class="product-detail-info">

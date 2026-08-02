@@ -13,6 +13,7 @@ class Coffee extends Model
     protected $fillable = [
         'name',
         'description',
+        'picture_path',
         'price',
         'size',
         'heat',

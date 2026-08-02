@@ -5,7 +5,7 @@
     $sizeOptions = ['small', 'medium', 'large'];
 @endphp
 
-<form action="{{ $action }}" method="POST">
+<form action="{{ $action }}" method="POST" enctype="multipart/form-data">
     @csrf
     @if(strtoupper($method) !== 'POST')
         @method($method)
@@ -41,6 +41,11 @@
         @else
             {{-- <span class="form-hint">Máximo de 200 caracteres.</span> --}}
         @enderror
+    </div>
+        
+    <div class="form-group">
+        <label class="form-label" for="picture">Foto <span class="form-optional">(opcional)</span></label>
+        <input type="file" id="picture" name="picture">
     </div>
 
     <div class="form-group">
