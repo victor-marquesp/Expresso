@@ -113,3 +113,44 @@
   color: var(--color-text-primary);
   cursor: pointer;
 }
+
+/* File Input */
+
+.form-file {
+  display: block;
+  width: 100%;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+}
+
+.form-file::file-selector-button {
+  margin-right: var(--space-4);
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: background-color var(--duration-base) var(--ease-base);
+}
+
+.form-file::file-selector-button:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.form-file:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.form-file.is-invalid {
+  color: var(--color-danger);
+}
+
+.form-file.is-invalid::file-selector-button {
+  border-color: var(--color-danger);
+}

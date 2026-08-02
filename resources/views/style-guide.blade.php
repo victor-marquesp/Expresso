@@ -64,6 +64,7 @@
         <div class="flex gap-3 mb-4" style="flex-wrap: wrap;">
             <button class="button button-primary">Primary</button>
             <button class="button button-secondary">Secondary</button>
+            <button class="button button-accent">Accent</button>
             <button class="button button-ghost">Ghost</button>
             <button class="button button-danger">Danger</button>
             <button class="button button-primary" disabled>Disabled</button>
@@ -134,6 +135,11 @@
                     <input type="checkbox" id="sg-featured" class="form-check-input">
                     <label for="sg-featured" class="form-check-label">Destacar na home</label>
                 </div>
+            </div>
+
+            <div class="form-group">
+                <label for="picture">Foto</label>
+                <input type="file" id="picture" class="form-file" accept="image/*">
             </div>
 
             <button type="button" class="button button-primary button-block">Salvar café</button>

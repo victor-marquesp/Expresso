@@ -77,14 +77,14 @@
 
 .product-temperature.is-hot {
   background-color: rgba(232, 182, 92, .12);
-  border-color: var(--color-warning);
-  color: var(--color-warning);
+  border-color: tomato;
+  color: tomato;
 }
 
 .product-temperature.is-cold {
   background-color: rgba(101, 184, 245, .12);
-  border-color: var(--color-info);
-  color: var(--color-info);
+  border-color: lightblue;
+  color: lightblue;
 }
 
 .product-card .button {

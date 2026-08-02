@@ -3,12 +3,15 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 use App\Enums\Size;
 use App\Enums\Heat;
 
 class Coffee extends Model
 {
+
+    use HasFactory;
     
     protected $fillable = [
         'name',

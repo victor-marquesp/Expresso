@@ -1,11 +1,8 @@
 @props(['coffee'])
 
 <section class="product-detail">
-    <img src="{{ 
-            $coffee->picture_path ? asset('storage/' .$coffee->picture_path) : asset("images/no-picture.webp") 
-        }}" 
-        alt="{{ $coffee->name }}"
-        class="product-detail-image">
+    <img src="{{ $coffee->picture_path ? asset('storage/' . $coffee->picture_path) : asset('images/no-picture.webp') }}"
+        alt="{{ $coffee->name }}" class="product-detail-image">
 
     <div class="product-detail-info">
 
@@ -17,9 +14,17 @@
             <span>{{ $coffee->volume_ml }} ml</span>
             {{-- <span>&middot;</span> --}}
             <span class="badge badge-neutral">{{ $coffee->size->value }}</span>
-            <span class="product-temperature {{ $coffee->heat->value === 'hot' ? 'is-hot' : 'is-cold' }}">
-                {{ $coffee->heat->value }}
-            </span>
+            @if ($coffee->heat->value === 'hot')
+                <span class="product-temperature is-hot">
+                    <i class="bi bi-cup-hot-fill"></i>
+                    quente
+                </span>
+            @else
+                <span class="product-temperature is-cold">
+                    <i class="bi bi-boxes"></i>
+                    gelado
+                </span>
+            @endif
         </div>
 
         @if (!empty($coffee->description))
@@ -34,16 +39,19 @@
 
         <div class="product-detail-actions">
 
-            <a href="#" type="button" class="button button-primary button-md">
-                Adicionar ao pedido
+            <a href="#">
+                <button class="button button-primary button-md">
+                    Adicionar ao pedido
+                </button>
             </a>
 
-            <a href="{{ route('coffees.edit', $coffee) }}" type="button" class="button button-accent button-md">
-                Editar
+            <a href="{{ route('coffees.edit', $coffee) }}">
+                <button class="button button-secondary button-md">
+                    Editar
+                </button>
             </a>
 
-            <button type="button" class="button button-danger" data-bs-toggle="modal"
-                data-bs-target="#removeCoffeeModal">
+            <button class="button button-danger" data-bs-toggle="modal" data-bs-target="#removeCoffeeModal">
                 Remover café
             </button>
 
@@ -56,7 +64,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h3 class="modal-title">Remover {{ $coffee->name }}?</h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                 </div>
                 <div class="modal-body">
                     Essa ação não pode ser desfeita. O café será removido do cardápio permanentemente.

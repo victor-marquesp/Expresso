@@ -45,7 +45,7 @@
         
     <div class="form-group">
         <label class="form-label" for="picture">Foto <span class="form-optional">(opcional)</span></label>
-        <input type="file" id="picture" name="picture">
+        <input type="file" class="form-file" id="picture" name="picture" >
     </div>
 
     <div class="form-group">

@@ -25,20 +25,18 @@
         <p class="product-volume">
             {{ $coffee->volume_ml }} ml
         </p>
-
-        <span class="product-temperature">
-            @if ($coffee->heat->value === 'hot')
-                <span style="color:tomato;">
-                    <i class="bi bi-cup-hot-fill"></i>
-                    quente
-                </span>
-            @else
-                <span style="color:lightblue;">
-                    <i class="bi bi-boxes"></i>
-                    gelado
-                </span>
-            @endif
-        </span>
+        
+        @if ($coffee->heat->value === 'hot')
+            <span class="product-temperature is-hot">
+                <i class="bi bi-cup-hot-fill"></i>
+                quente
+            </span>
+        @else
+            <span class="product-temperature is-cold">
+                <i class="bi bi-boxes"></i>
+                gelado
+            </span>
+        @endif
 
         <button class="button button-primary">
             Levar
