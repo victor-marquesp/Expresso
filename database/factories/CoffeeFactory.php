@@ -11,7 +11,7 @@ use App\Enums\Heat;
 /**
  * @extends Factory<Coffee>
  */
-class coffeeFactory extends Factory
+class CoffeeFactory extends Factory
 {
     /**
      * Define the model's default state.
